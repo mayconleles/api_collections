@@ -13,5 +13,15 @@ fun main(){
     val wagesFilter =  wage.filter {  d: Double -> d > 2500  }
     println("-----------------------")
     wagesFilter.forEach { println(it) }
+    println("-----------------------")
+    println(wage.count{it in 2000.00..5000.00 })
 
+    println("-----------------------")
+
+    println(wage.find{it == 2250.00 })
+
+    println("-----------------------")
+    println(wage.any{it == 1000.0 })
+    println("-----------------------")
+    println(wage.any{it == 500.0 })
 }
