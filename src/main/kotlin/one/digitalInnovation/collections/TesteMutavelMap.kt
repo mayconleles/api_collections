@@ -16,8 +16,14 @@ fun main (){
     repository.create(maria.name,maria)
     repository.create(pedro.name,pedro)
     repository.create(matheus.name,matheus)
-
-
     println(repository.findById(joao.name))
     println(repository.findById(maria.name))
+
+    println("--------------------------------")
+    repository.findAll().forEach { println(it) }
+
+    println("--------------------------------")
+    repository.remove(joao.name)
+    repository.findAll().forEach { println(it) }
+
 }
